@@ -1,0 +1,9 @@
+//mixin
+
+@mixin productos{
+    margin: 100px 0;
+    display: grid;
+    grid-area: productos-1;
+    padding: 10px;
+    background-color: $color-athari;
+}

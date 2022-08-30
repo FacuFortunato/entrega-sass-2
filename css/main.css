@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+footer h3, footer div h2, footer ul li, footer ul h2, .contenedor main h3, .contenedor .productos-1 div span, .contenedor .productos-2 div span, .contenedor .cajas div h4 {
+  color: black; }
+
+/*estilos index*/
+/*body*/
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: #ccd1d1; }
+
+/*header*/
+header {
+  margin: 10px;
+  padding: 20px;
+  background-color: #002B5B;
+  text-align: center; }
+
+/*footer*/
+footer {
+  margin: 0 10px 0 10px;
+  padding-left: 25px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: #002B5B;
+  font-size: 15px; }
+  footer div {
+    margin: 20px 0px; }
+    footer div img {
+      margin-bottom: 0;
+      height: 20px;
+      width: 20px; }
+  footer ul {
+    list-style-type: none; }
+
+/*contenedor*/
+.contenedor {
+  display: grid;
+  justify-content: center;
+  grid-template-areas: "productos-1 productos-1" "productos-2 productos-2" "cajas cajas";
+  /*productos*/
+  /*banner*/
+  /*cajas*/ }
+  .contenedor main h3 {
+    margin: 100px auto; }
+  .contenedor .productos-1 {
+    margin: 100px 0;
+    display: grid;
+    grid-area: productos-1;
+    padding: 10px;
+    background-color: #002B5B; }
+    .contenedor .productos-1 div {
+      margin: 1rem;
+      display: flex;
+      flex-flow: column wrap;
+      box-shadow: 2px 4px 6px;
+      background-color: white; }
+      .contenedor .productos-1 div span {
+        margin: auto; }
+      .contenedor .productos-1 div button {
+        width: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+        background-color: #afa5a5; }
+      .contenedor .productos-1 div img {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: relative; }
+  .contenedor .productos-2 {
+    margin: 100px 0;
+    display: grid;
+    grid-area: productos-1;
+    padding: 10px;
+    background-color: #002B5B; }
+    .contenedor .productos-2 div {
+      margin: 1rem;
+      display: flex;
+      flex-flow: column wrap;
+      box-shadow: 2px 4px 6px;
+      background-color: white; }
+      .contenedor .productos-2 div span {
+        margin: auto; }
+      .contenedor .productos-2 div button {
+        width: 100px;
+        margin: auto;
+        margin-bottom: 10px;
+        background-color: #afa5a5; }
+      .contenedor .productos-2 div img {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: relative; }
+  .contenedor aside {
+    display: none; }
+  .contenedor .cajas {
+    display: grid;
+    grid-area: cajas;
+    grid-template-columns: 1fr; }
+    .contenedor .cajas .mapa-cajas {
+      background-color: rgba(255, 255, 255, 0.308);
+      border: 1px solid black;
+      height: 600px;
+      width: 250px;
+      margin-bottom: 200px;
+      margin-top: 50px; }
+    .contenedor .cajas div {
+      margin: 15px;
+      padding-top: 15px;
+      border: 1px solid black;
+      align-content: center;
+      justify-content: center; }
+      .contenedor .cajas div img {
+        display: inline-block;
+        width: 50px;
+        height: 50px; }
+
+/*estilos media queries*/
+@media screen and (min-width: 400px) {
+  footer ul, footer div {
+    font-size: 20px; }
+  .contenedor {
+    grid-template-areas: "productos-1 productos-1" "banner banner" "productos-2 productos-2" "cajas cajas";
+    /*aside*/ }
+    .contenedor .productos-1 {
+      grid-template-columns: 1fr 1fr; }
+    .contenedor .productos-2 {
+      grid-template-columns: 1fr 1fr; }
+    .contenedor aside {
+      display: grid;
+      grid-area: banner;
+      width: 100%; }
+      .contenedor aside img {
+        height: 200px;
+        width: 500px; }
+    .contenedor .cajas {
+      height: 700px;
+      width: auto; } }
+
+@media screen and (min-width: 750px) {
+  /*header*/
+  header nav div div div ul li:hover {
+    transform: scale(0.9); }
+  /*footer*/
+  footer {
+    width: 100%;
+    font-size: 20px; }
+  /*estilos index*/
+  .contenedor {
+    /*cajas*/ }
+    .contenedor .productos-1 {
+      grid-template-columns: 1fr 1fr 1fr; }
+      .contenedor .productos-1 div img {
+        transition: 2s; }
+      .contenedor .productos-1 div img:hover {
+        transform: scale(1.2); }
+      .contenedor .productos-1 div button:hover {
+        transform: scale(0.9); }
+    .contenedor .productos-2 {
+      grid-template-columns: 1fr 1fr 1fr; }
+      .contenedor .productos-2 div img {
+        transition: 2s; }
+      .contenedor .productos-2 div img:hover {
+        transform: scale(1.2); }
+      .contenedor .productos-2 div button:hover {
+        transform: scale(0.9); }
+    .contenedor .cajas {
+      grid-template-columns: 1fr 1fr 1fr;
+      height: 350px;
+      width: 600px; }
+      .contenedor .cajas div img {
+        transition: 2s; }
+      .contenedor .cajas div img:hover {
+        transform: scale(1.2); }
+    .contenedor aside img {
+      height: 200px;
+      width: 700px; } }
